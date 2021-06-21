@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Laporan Keuangan</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="http://localhost/aplorganisasi/public/stisla/assets/css/style.css">
+  <link rel="stylesheet" href="http://localhost/aplorganisasi/public/stisla/assets/css/components.css">
+  <!-- Livewire Styles -->
+<style>
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid] {
+        display: none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+    <form class="form-inline mr-auto">
+      <ul class="navbar-nav mr-3">
+        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+      </ul>
+    </form>
+    <ul class="navbar-nav navbar-right">
+      <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+        <img alt="image" src="http://localhost/aplorganisasi/public/stisla/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+        <div class="d-sm-none d-lg-inline-block">Hi, Admin</div></a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a href="features-profile.html" class="dropdown-item has-icon">
+            <i class="far fa-user"></i> Profile
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item has-icon text-danger">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <a href="index.html"><img src="http://localhost/aplorganisasi/public/stisla/assets/img/logo.png" class="img-fluid" width="70" height="70"></a>
+    </div>
+    <div class="sidebar-brand sidebar-brand-sm">
+      <a href="index.html">AMPI</a>
+    </div>
+    <ul class="sidebar-menu">
+        <li class="menu-header">Admin</li>
+        <li><a class="nav-link" href="http://localhost/aplorganisasi/dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+        
+        <li class="menu-header">Starter</li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-database"></i><span>Master Data</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="http://localhost/aplorganisasi/bidang">Bidang</a></li>
+              <li><a class="nav-link" href="http://localhost/aplorganisasi/pendaftaran-anggota">Pendaftaran Anggota</a></li>
+              <li><a class="nav-link" href="http://localhost/aplorganisasi/anggota">Anggota</a></li>
+              <li><a class="nav-link" href="http://localhost/aplorganisasi/config">Config</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-money-check"></i><span>Data Transaksi</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="http://localhost/aplorganisasi/event">Event</a></li>
+              <li><a class="nav-link" href="http://localhost/aplorganisasi/kategori">Kategori</a></li>
+              <li><a class="nav-link" href="http://localhost/aplorganisasi/kas">Transaksi</a></li>
+              <li><a class="nav-link" href="http://localhost/aplorganisasi/laporan">Laporan</a></li>
+            </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-blog"></i><span>Konten</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="index-0.html">Artikel</a></li>
+              <li><a class="nav-link" href="index-0.html">Pengumuman</a></li>
+              <li><a class="nav-link" href="index.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-cog"></i><span>Management Website</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="index-0.html">Pengaturan Sistem</a></li>
+              <li><a class="nav-link" href="index.html">Slider</a></li>
+            </ul>
+        </li>
+  </aside>      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Laporan Keuangan</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="http://localhost/aplorganisasi/dashboard"><i class="fas fa-home"></i></a></div>
+<div class="breadcrumb-item">Laporan Keuangan</div>
+
+            </div>
+          </div>
+
+          <div class="section-body">
+                  <div wire:id="kFplX60cbcmaWbtKFuTO" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;kFplX60cbcmaWbtKFuTO&quot;,&quot;name&quot;:&quot;laporan.laporan-index&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;url&quot;:&quot;http:\/\/localhost\/aplorganisasi\/laporan&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;c58ccfdb&quot;,&quot;data&quot;:{&quot;showMode&quot;:false,&quot;tgl_awal&quot;:null,&quot;tgl_akhir&quot;:null,&quot;kategori_id&quot;:null,&quot;kategori&quot;:null,&quot;laporans&quot;:null,&quot;sumDebit&quot;:null,&quot;sumKredit&quot;:null,&quot;sumSaldoAwal&quot;:null,&quot;sumSaldoAkhir&quot;:null,&quot;bank&quot;:null},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;aa0ed5c77309aaaa8c04ef767140292acc4226ef727ed1296a01388f722119de&quot;}}">
+    <div class="card overflow-auto">
+        <div class="card-body">
+            <h4 class="mb-4">Filter Laporan</h4>
+            <form>
+                <div class="row">
+                    <div class="col-md-3">
+                      <label for="tgl_awal">Dari Tanggal</label>  
+                      <input type="date" class="form-control " wire:model="tgl_awal">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="tgl_akhir">Sampai Tanggal</label>  
+                      <input type="date" class="form-control " wire:model="tgl_akhir">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="Kategori_id">Kategori</label>  
+                      <select type="date" class="form-control " wire:model="kategori_id">
+                            <option value="">-- Pilih --</option>
+                            <option value="all">All</option>
+                                                    <option value="1">Listrik</option>
+                                                    <option value="2">Ulang Tahun Ampi</option>
+                                              </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="bank">Bank</label>  
+                      <select type="date" class="form-control " wire:model="bank">
+                            <option value="">-- Pilih --</option>
+                            <option value="all">All</option>
+                                                    <option value="Kas Kecil">Kas Kecil</option>
+                                                    <option value="Bank BRI">Bank BRI</option>
+                                                    <option value="Bank Mandiri">Bank Mandiri</option>
+                                              </select>
+                    </div>
+                    
+                </div>
+                        <button class="btn btn-info mt-3" wire:click.prevent="show">Tampilkan</button>
+            </form>
+        </div>
+    </div>
+
+    </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2021 <div class="bullet"></div> Support By <a href="#">RaTech</a>
+        </div>
+        <div class="footer-right">
+          1.0.0
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="http://localhost/aplorganisasi/public/stisla/assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+  
+
+  <!-- Template JS File -->
+  <script src="http://localhost/aplorganisasi/public/stisla/assets/js/scripts.js"></script>
+  <script src="http://localhost/aplorganisasi/public/stisla/assets/js/custom.js"></script>
+
+  <!-- Livewire Scripts -->
+
+<script src="/aplorganisasi/livewire/livewire.js?id=936e5d0fb0b76b631ba7" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false">
+    if (window.livewire) {
+        console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+    }
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '/aplorganisasi';
+    window.livewire_token = 'fd5K4p6u6hnHo7xtsTb9t6jrX1GqRVG6bqMteoOw';
+
+    /* Make sure Livewire loads first. */
+    if (window.Alpine) {
+        /* Defer showing the warning so it doesn't get buried under downstream errors. */
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function() {
+                console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\n\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+            })
+        });
+    }
+
+    /* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        window.livewire.start();
+    });
+</script>
+  <script src="http://localhost/aplorganisasi/public/vendor/livewire/livewire.js"></script>
+
+  <!-- Page Specific JS File -->
+</body>
+</html>
